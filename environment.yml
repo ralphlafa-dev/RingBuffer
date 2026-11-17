@@ -1,0 +1,10 @@
+# Bench/test dependencies. Compiler and CMake come from the system (GCC 16, CMake 4.x).
+#   create: conda env create -f environment.yml
+#   update: conda env update -n spsc -f environment.yml --prune
+name: spsc
+channels:
+  - conda-forge
+dependencies:
+  - benchmark=1.10.0
+  - gtest=1.18.0
+  - libboost-headers=1.92.0   # Boost.Lockfree spsc_queue (reference)
